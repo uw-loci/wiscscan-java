@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-v4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>loci</groupId>
+    <artifactId>loci-base</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>wiscscan-utils</artifactId>
+
+  <name>WiscScan Utilities</name>
+  <description>Utility code for use with WiscScan.</description>
+  <inceptionYear>2011</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>BSD</name>
+      <url>http://dev.loci.wisc.edu/svn/java/trunk/projects/wiscscan-utilities/LICENSE.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <packageName>loci.wiscscan.utils</packageName>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <developers>
+    <developer>
+      <id>hanly</id>
+      <name>Hanly De Los Santos</name>
+      <url>http://loci.wisc.edu/people/hanly-de-los-santos</url>
+      <organization>UW-Madison LOCI</organization>
+      <organizationUrl>http://loci.wisc.edu/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-6</timezone>
+    </developer>
+  </developers>
+
+  <!-- NB: for loci-base, in case of partial checkout -->
+  <repositories>
+    <repository>
+      <id>loci.releases</id>
+      <url>http://dev.loci.wisc.edu/maven2/releases</url>
+    </repository>
+    <repository>
+      <id>loci.snapshots</id>
+      <url>http://dev.loci.wisc.edu/maven2/snapshots</url>
+    </repository>
+  </repositories>
+
+</project>
