@@ -34,6 +34,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package loci.wiscscan.utils;
 
+import javax.security.auth.login.LoginContext;
+import javax.security.auth.login.LoginException;
+
 /**
  * Code to manage kerberos user authentication in WiscScan.
  *
@@ -43,4 +46,48 @@ package loci.wiscscan.utils;
  *
  * @author Hanly De Los Santos
  */
-public class KerberosAuth { }
+public class KerberosAuth { 
+	
+	/**
+	 * Attempts to log-in with the specified username and password.
+	 * 
+	 * @return true if successfully logged in.
+	 * @return false if unable to log in.
+	 */
+	public static boolean tryLogin(String username, String password) {
+		boolean returnValue = true;
+		
+		// Create the credentials file
+		Credentials credentials = new Credentials();
+		credentials.setM_username(username]);
+		credentials.setM_password(password);
+
+		LoginContext lc = null;
+		try 
+		{
+			lc = new LoginContext("WiscScanLogin", new AutoLoginHandler(credentials));
+		} catch (LoginException le) 
+		{
+			System.err.println("Cannot create LoginContext. " + le.getMessage());
+			returnValue = false;
+		} catch (SecurityException se) 
+		{
+			System.err.println("Cannot create LoginContext. " + se.getMessage());
+			returnValue = false;
+		} 
+
+		try 
+		{
+			// attempt authentication
+			lc.login();
+		} catch (LoginException le) 
+		{
+		    System.err.println("Authentication failed:");
+		    System.err.println("  " + le.getMessage());
+			returnValue = false;
+		}
+
+		return returnValue;
+    }
+	
+}
