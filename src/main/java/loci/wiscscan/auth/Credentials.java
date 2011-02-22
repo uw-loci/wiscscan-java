@@ -1,11 +1,11 @@
 //
-// AutoLoginHandler.java
+// Credentials.java
 //
 
 /*
-Utility code for use with WiscScan.
+Java code for use with WiscScan.
 
-Copyright (c) 2011, UW-Madison LOCI
+Copyright (c) 2008, UW-Madison LOCI
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -32,48 +32,25 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-package loci.wiscscan.utils;
+package loci.wiscscan.auth;
 
-import java.io.IOException;
+public class Credentials {
 
-import javax.security.auth.callback.Callback;
-import javax.security.auth.callback.CallbackHandler;
-import javax.security.auth.callback.NameCallback;
-import javax.security.auth.callback.PasswordCallback;
-import javax.security.auth.callback.UnsupportedCallbackException;
+	// Members
+	public String m_password;
+	public String m_username;
 
-public class AutoLoginHandler implements CallbackHandler {
-
-	// The storage variables
-	private final String m_password;
-	private final String m_username;
-	
-	/**
-	 * This is the constructor which takes in the username and password to send
-	 * the JAAS call.
-	 * @param Credentials This is the object containing the login info
-	 */
-	public AutoLoginHandler( Credentials credentials ) {
-		m_username = credentials.m_username;
-		m_password = credentials.m_password;
+	public String getM_password() {
+		return m_password;
 	}
-	
-	@Override
-	public void handle(Callback[] callbacks) throws IOException,
-			UnsupportedCallbackException {
-
-		for( int i = 0; i < callbacks.length; i++ ) {
-			Callback callback = callbacks[i];
-			if ( callback instanceof NameCallback ) {
-				( (NameCallback) callback ).setName( m_username );
-			}
-			else if ( callback instanceof PasswordCallback ) {
-				( (PasswordCallback) callback ).setPassword( m_password.toCharArray() );
-			}
-			else {
-				throw new UnsupportedCallbackException( callback );
-	        }
-	    }
+	public void setM_password(String m_password) {
+		this.m_password = m_password;
+	}
+	public String getM_username() {
+		return m_username;
+	}
+	public void setM_username(String m_username) {
+		this.m_username = m_username;
 	}
 
 }

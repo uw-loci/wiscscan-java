@@ -11,7 +11,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>wiscscan-utils</artifactId>
+  <artifactId>wiscscan-java</artifactId>
 
   <name>WiscScan Java code</name>
   <description>Java code for use with WiscScan.</description>
@@ -59,7 +59,7 @@
         <configuration>
           <archive>
             <manifest>
-              <packageName>loci.wiscscan.utils</packageName>
+              <packageName>loci.wiscscan</packageName>
             </manifest>
           </archive>
         </configuration>
