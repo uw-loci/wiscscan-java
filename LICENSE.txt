@@ -1,4 +1,4 @@
-Utility code for use with WiscScan.
+Java code for use with WiscScan.
 
 Copyright (c) 2008, UW-Madison LOCI
 All rights reserved.

@@ -13,17 +13,44 @@
 
   <artifactId>wiscscan-utils</artifactId>
 
-  <name>WiscScan Utilities</name>
-  <description>Utility code for use with WiscScan.</description>
-  <inceptionYear>2011</inceptionYear>
+  <name>WiscScan Java code</name>
+  <description>Java code for use with WiscScan.</description>
+  <inceptionYear>2008</inceptionYear>
 
   <licenses>
     <license>
       <name>BSD</name>
-      <url>http://dev.loci.wisc.edu/svn/java/trunk/projects/wiscscan-utilities/LICENSE.txt</url>
+      <url>http://dev.loci.wisc.edu/svn/java/trunk/projects/wiscscan-java/LICENSE.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
+
+  <dependencies>
+    <dependency>
+      <groupId>${bio-formats.groupId}</groupId>
+      <artifactId>bio-formats</artifactId>
+      <version>${bio-formats.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>${bio-formats.groupId}</groupId>
+      <artifactId>loci-common</artifactId>
+      <version>${bio-formats.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>${bio-formats.groupId}</groupId>
+      <artifactId>ome-xml</artifactId>
+      <version>${bio-formats.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>flow-cytometry</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -40,6 +67,14 @@
       <plugin>
         <groupId>loci.maven.plugins</groupId>
         <artifactId>cppwrap-maven-plugin</artifactId>
+        <configuration>
+          <libraries>
+            <library>${bio-formats.groupId}:bio-formats:jar:${bio-formats.version}</library>
+            <library>${bio-formats.groupId}:loci-common:jar:${bio-formats.version}</library>
+            <library>${bio-formats.groupId}:ome-xml:jar:${bio-formats.version}</library>
+            <library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
+          </libraries>
+        </configuration>
       </plugin>
     </plugins>
   </build>
@@ -55,6 +90,22 @@
         <role>developer</role>
       </roles>
       <timezone>-6</timezone>
+    </developer>
+    <developer>
+      <id>curtis</id>
+      <name>Curtis Rueden</name>
+      <email>ctrueden@wisc.edu</email>
+      <url>http://loci.wisc.edu/people/curtis-rueden</url>
+      <organization>UW-Madison LOCI</organization>
+      <organizationUrl>http://loci.wisc.edu/</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>-6</timezone>
+      <properties>
+        <picUrl>http://loci.wisc.edu/files/loci/images/people/curtis-2010.jpg</picUrl>
+      </properties>
     </developer>
   </developers>
 
