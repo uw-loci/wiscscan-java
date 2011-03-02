@@ -36,7 +36,6 @@ package loci.wiscscan.auth;
 
 import javax.security.auth.login.LoginContext;
 import javax.security.auth.login.LoginException;
-import javax.swing.JOptionPane;
 
 /**
  * Code to manage kerberos user authentication in WiscScan.
@@ -58,40 +57,33 @@ public class KerberosAuth {
 	public static boolean tryLogin(String username, String password) {
 		boolean returnValue = true;
 		
-		JOptionPane.showMessageDialog(null,
-				"realm = " + System.getProperty("java.security.krb5.realm") +
-				"\nkdc = " + System.getProperty("java.security.krb5.kdc") +
-				"\nconfig = " + System.getProperty("java.security.auth.login.config"));
-
 		// Create the credentials file
-//		Credentials credentials = new Credentials();
-//		credentials.setM_username(username);
-//		credentials.setM_password(password);
-//
-//		LoginContext lc = null;
-//		try {
-//			lc = new LoginContext("WiscScanLogin", new AutoLoginHandler(credentials));
-//		}
-//		catch (LoginException le) {
-//			System.err.println("Cannot create LoginContext. " + le.getMessage());
-//			returnValue = false;
-//		}
-//		catch (SecurityException se) {
-//			System.err.println("Cannot create LoginContext. " + se.getMessage());
-//			returnValue = false;
-//		}
-//
-//		try {
-//			// attempt authentication
-//			lc.login();
-//		}
-//		catch (LoginException le) {
-//			System.err.println("Authentication failed:");
-//			System.err.println("  " + le.getMessage());
-//			returnValue = false;
-//		}
+		Credentials credentials = new Credentials();
+		credentials.setM_username(username);
+		credentials.setM_password(password);
+
+		LoginContext lc = null;
+		try {
+			lc = new LoginContext("WiscScanLogin", new AutoLoginHandler(credentials));
+		}
+		catch (LoginException le) {
+			System.err.println("Cannot create LoginContext. " + le.getMessage());
+			returnValue = false;
+		}
+		catch (SecurityException se) {
+			returnValue = false;
+		}
+
+		try {
+			// attempt authentication
+			lc.login();
+		}
+		catch (LoginException le) {
+			System.err.println("Authentication failed:");
+			System.err.println("  " + le.getMessage());
+			returnValue = false;
+		}
 
 		return returnValue;
 	}
-
 }

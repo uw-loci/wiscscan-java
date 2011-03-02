@@ -71,7 +71,7 @@ public class AutoLoginHandler implements CallbackHandler {
 				( (PasswordCallback) callback ).setPassword( m_password.toCharArray() );
 			}
 			else {
-				throw new UnsupportedCallbackException( callback );
+				throw new UnsupportedCallbackException(callbacks[i], "Unrecognized Callback");
 	        }
 	    }
 	}
