@@ -51,7 +51,7 @@ public class AutoLoginHandler implements CallbackHandler {
 	/**
 	 * This is the constructor which takes in the username and password to send
 	 * the JAAS call.
-	 * @param Credentials This is the object containing the login info
+	 * @param credentials This is the object containing the login info
 	 */
 	public AutoLoginHandler( Credentials credentials ) {
 		m_username = credentials.m_username;

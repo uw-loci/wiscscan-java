@@ -51,12 +51,9 @@ public class KerberosAuth {
 	/**
 	 * Attempts to log-in with the specified username and password.
 	 *
-	 * @return true if successfully logged in.
-	 * @return false if unable to log in.
+	 * @return true if successfully logged in, false if unable to log in.
 	 */
 	public static boolean tryLogin(String username, String password) {
-		boolean returnValue = true;
-		
 		// Create the credentials file
 		Credentials credentials = new Credentials();
 		credentials.setM_username(username);
@@ -68,10 +65,10 @@ public class KerberosAuth {
 		}
 		catch (LoginException le) {
 			System.err.println("Cannot create LoginContext. " + le.getMessage());
-			returnValue = false;
+			return false;
 		}
 		catch (SecurityException se) {
-			returnValue = false;
+			return false;
 		}
 
 		try {
@@ -81,9 +78,9 @@ public class KerberosAuth {
 		catch (LoginException le) {
 			System.err.println("Authentication failed:");
 			System.err.println("  " + le.getMessage());
-			returnValue = false;
+			return false;
 		}
 
-		return returnValue;
+		return true;
 	}
 }
