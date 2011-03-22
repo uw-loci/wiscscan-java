@@ -34,6 +34,15 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package loci.wiscscan.auth;
 
+/**
+ * TODO
+ *
+ * <dl><dt><b>Source code:</b></dt>
+ * <dd><a href="http://dev.loci.wisc.edu/trac/java/browser/trunk/projects/wiscscan-utils/src/main/java/loci/wiscscan/auth/Credentials.java">Trac</a>,
+ * <a href="http://dev.loci.wisc.edu/svn/java/trunk/projects/wiscscan-utils/src/main/java/wiscscan/auth/Credentials.java">SVN</a></dd></dl>
+ *
+ * @author Hanly De Los Santos
+ */
 public class Credentials {
 
 	// Members
