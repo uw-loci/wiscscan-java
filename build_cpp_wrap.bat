@@ -4,6 +4,7 @@ rem The batch file takes in the root path of the WiscScan directory, as the loca
 set wiscScanPath=%~f1
 set cppwrapRootPath=%CD%\target\cppwrap
 
+call mvn clean
 call mvn package cppwrap:wrap
 cd .\target\cppwrap
 rmdir /S /Q .\build
