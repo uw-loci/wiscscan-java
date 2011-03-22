@@ -46,8 +46,8 @@ import javax.security.auth.callback.UnsupportedCallbackException;
  * TODO
  *
  * <dl><dt><b>Source code:</b></dt>
- * <dd><a href="http://dev.loci.wisc.edu/trac/java/browser/trunk/projects/wiscscan-utils/src/main/java/loci/wiscscan/auth/AutoLoginHandler.java">Trac</a>,
- * <a href="http://dev.loci.wisc.edu/svn/java/trunk/projects/wiscscan-utils/src/main/java/wiscscan/auth/AutoLoginHandler.java">SVN</a></dd></dl>
+ * <dd><a href="http://dev.loci.wisc.edu/trac/software/browser/trunk/projects/wiscscan-java/src/main/java/loci/wiscscan/auth/AutoLoginHandler.java">Trac</a>,
+ * <a href="http://dev.loci.wisc.edu/svn/software/trunk/projects/wiscscan-java/src/main/java/loci/wiscscan/auth/AutoLoginHandler.java">SVN</a></dd></dl>
  *
  * @author Hanly De Los Santos
  */
