@@ -28,13 +28,13 @@
   <dependencies>
     <dependency>
       <groupId>${bio-formats.groupId}</groupId>
-      <artifactId>bio-formats</artifactId>
+      <artifactId>loci-common</artifactId>
       <version>${bio-formats.version}</version>
-      <scope>runtime</scope>
     </dependency>
+
     <dependency>
       <groupId>${bio-formats.groupId}</groupId>
-      <artifactId>loci-common</artifactId>
+      <artifactId>bio-formats</artifactId>
       <version>${bio-formats.version}</version>
       <scope>runtime</scope>
     </dependency>
