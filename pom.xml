@@ -27,21 +27,21 @@
 
   <dependencies>
     <dependency>
-      <groupId>${bio-formats.groupId}</groupId>
+      <groupId>${scifio.groupId}</groupId>
       <artifactId>loci-common</artifactId>
-      <version>${bio-formats.version}</version>
+      <version>${scifio.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>${bio-formats.groupId}</groupId>
+      <groupId>${scifio.groupId}</groupId>
       <artifactId>bio-formats</artifactId>
-      <version>${bio-formats.version}</version>
+      <version>${scifio.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>${bio-formats.groupId}</groupId>
+      <groupId>${scifio.groupId}</groupId>
       <artifactId>ome-xml</artifactId>
-      <version>${bio-formats.version}</version>
+      <version>${scifio.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -70,9 +70,9 @@
         <version>1.0-SNAPSHOT</version>
         <configuration>
           <libraries>
-            <library>${bio-formats.groupId}:bio-formats:jar:${bio-formats.version}</library>
-            <library>${bio-formats.groupId}:loci-common:jar:${bio-formats.version}</library>
-            <library>${bio-formats.groupId}:ome-xml:jar:${bio-formats.version}</library>
+            <library>${scifio.groupId}:bio-formats:jar:${scifio.version}</library>
+            <library>${scifio.groupId}:loci-common:jar:${scifio.version}</library>
+            <library>${scifio.groupId}:ome-xml:jar:${scifio.version}</library>
             <library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
           </libraries>
         </configuration>
