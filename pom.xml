@@ -34,9 +34,9 @@
     </dependency>
 
     <dependency>
-      <groupId>${scifio.groupId}</groupId>
-      <artifactId>bio-formats</artifactId>
-      <version>${scifio.version}</version>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>flow-cytometry</artifactId>
+      <version>${project.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -46,9 +46,9 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>flow-cytometry</artifactId>
-      <version>${project.version}</version>
+      <groupId>${scifio.groupId}</groupId>
+      <artifactId>scifio</artifactId>
+      <version>${scifio.version}</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>
@@ -71,9 +71,9 @@
         <version>1.1.0</version>
         <configuration>
           <libraries>
-            <library>${scifio.groupId}:bio-formats:jar:${scifio.version}</library>
             <library>${scifio.groupId}:loci-common:jar:${scifio.version}</library>
             <library>${scifio.groupId}:ome-xml:jar:${scifio.version}</library>
+            <library>${scifio.groupId}:scifio:jar:${scifio.version}</library>
             <library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
           </libraries>
         </configuration>
