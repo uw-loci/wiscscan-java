@@ -68,7 +68,7 @@
       <plugin>
         <groupId>loci.maven.plugins</groupId>
         <artifactId>cppwrap-maven-plugin</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.1.0</version>
         <configuration>
           <libraries>
             <library>${scifio.groupId}:bio-formats:jar:${scifio.version}</library>
