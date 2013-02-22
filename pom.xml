@@ -29,7 +29,7 @@
   <dependencies>
     <dependency>
       <groupId>${scifio.groupId}</groupId>
-      <artifactId>loci-common</artifactId>
+      <artifactId>loci-legacy</artifactId>
       <version>${scifio.version}</version>
     </dependency>
     <dependency>
@@ -70,7 +70,7 @@
         <version>1.1.0</version>
         <configuration>
           <libraries>
-            <library>${scifio.groupId}:loci-common:jar:${scifio.version}</library>
+            <library>${scifio.groupId}:loci-legacy:jar:${scifio.version}</library>
             <library>${scifio.groupId}:ome-xml:jar:${scifio.version}</library>
             <library>${scifio.groupId}:scifio:jar:${scifio.version}</library>
             <library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
