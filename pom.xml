@@ -32,6 +32,11 @@
       <artifactId>loci-common</artifactId>
       <version>${scifio.version}</version>
     </dependency>
+    <dependency>
+      <groupId>${scifio.groupId}</groupId>
+      <artifactId>scifio</artifactId>
+      <version>${scifio.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -42,12 +47,6 @@
     <dependency>
       <groupId>${scifio.groupId}</groupId>
       <artifactId>ome-xml</artifactId>
-      <version>${scifio.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>${scifio.groupId}</groupId>
-      <artifactId>scifio</artifactId>
       <version>${scifio.version}</version>
       <scope>runtime</scope>
     </dependency>
