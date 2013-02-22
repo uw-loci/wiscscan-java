@@ -8,7 +8,7 @@
   <parent>
     <groupId>loci</groupId>
     <artifactId>pom-loci</artifactId>
-    <version>1.0</version>
+    <version>1.3</version>
   </parent>
 
   <artifactId>wiscscan-java</artifactId>
