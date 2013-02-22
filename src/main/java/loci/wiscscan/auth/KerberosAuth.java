@@ -66,4 +66,5 @@ public class KerberosAuth {
 
 		return true;
 	}
+
 }

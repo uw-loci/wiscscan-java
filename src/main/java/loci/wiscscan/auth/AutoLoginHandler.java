@@ -45,27 +45,29 @@ public class AutoLoginHandler implements CallbackHandler {
 	 * the JAAS call.
 	 * @param credentials This is the object containing the login info
 	 */
-	public AutoLoginHandler( Credentials credentials ) {
+	public AutoLoginHandler(Credentials credentials) {
 		m_username = credentials.m_username;
 		m_password = credentials.m_password;
 	}
 
 	@Override
 	public void handle(Callback[] callbacks) throws IOException,
-			UnsupportedCallbackException {
+		UnsupportedCallbackException
+	{
 
 		for( int i = 0; i < callbacks.length; i++ ) {
 			Callback callback = callbacks[i];
-			if ( callback instanceof NameCallback ) {
-				( (NameCallback) callback ).setName( m_username );
+			if (callback instanceof NameCallback) {
+				((NameCallback) callback).setName(m_username);
 			}
-			else if ( callback instanceof PasswordCallback ) {
-				( (PasswordCallback) callback ).setPassword( m_password.toCharArray() );
+			else if (callback instanceof PasswordCallback) {
+				((PasswordCallback) callback).setPassword(m_password.toCharArray());
 			}
 			else {
-				throw new UnsupportedCallbackException(callbacks[i], "Unrecognized Callback");
-	        }
-	    }
+				throw new UnsupportedCallbackException(callbacks[i],
+					"Unrecognized Callback");
+			}
+		}
 	}
 
 }

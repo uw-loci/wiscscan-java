@@ -41,15 +41,16 @@ public class OMEXMLhelper {
 	public String getBinaryOnlyXML(final String metadataFile, final String uuid) {
 		try {
 			final ServiceFactory sf = new ServiceFactory();
-			final OMEXMLService omexmlService =sf.getInstance(OMEXMLService.class);
+			final OMEXMLService omexmlService = sf.getInstance(OMEXMLService.class);
 			final OMEXMLMetadata omeMeta = omexmlService.createOMEXMLMetadata();
 			omeMeta.setBinaryOnlyMetadataFile(metadataFile);
 			omeMeta.setBinaryOnlyUUID(uuid);
 			return omexmlService.getOMEXML(omeMeta);
 		}
 		catch (Exception exc) {
-			//exception will be handled by caller
+			// exception will be handled by caller
 			return null;
 		}
 	}
+
 }
