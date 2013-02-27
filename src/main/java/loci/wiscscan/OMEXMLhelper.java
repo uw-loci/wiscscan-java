@@ -38,7 +38,7 @@ public class OMEXMLhelper {
 	 * Extracts only the OME-XML header and UUID for partial metadata block in
 	 * OME-XML metadata population in images.
 	 */
-	public String getBinaryOnlyXML(final String metadataFile, final String uuid) {
+	public static String getBinaryOnlyXML(final String metadataFile, final String uuid) {
 		try {
 			final ServiceFactory sf = new ServiceFactory();
 			final OMEXMLService omexmlService = sf.getInstance(OMEXMLService.class);

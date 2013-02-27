@@ -37,7 +37,11 @@
       <artifactId>scifio</artifactId>
       <version>${scifio.version}</version>
     </dependency>
-
+	<dependency>
+      <groupId>${scifio.groupId}</groupId>
+      <artifactId>scifio-devel</artifactId>
+      <version>${scifio.version}</version>
+    </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>flow-cytometry</artifactId>
@@ -73,6 +77,7 @@
             <library>${scifio.groupId}:loci-legacy:jar:${scifio.version}</library>
             <library>${scifio.groupId}:ome-xml:jar:${scifio.version}</library>
             <library>${scifio.groupId}:scifio:jar:${scifio.version}</library>
+			<library>${scifio.groupId}:scifio-devel:jar:${scifio.version}</library>
             <library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
           </libraries>
         </configuration>
@@ -107,6 +112,17 @@
       <properties>
         <picUrl>http://loci.wisc.edu/files/loci/images/people/curtis-2010.jpg</picUrl>
       </properties>
+    </developer>
+	<developer>
+      <id>david</id>
+      <name>David Mayer</name>
+      <url>http://loci.wisc.edu/people/david-mayer</url>
+      <organization>UW-Madison LOCI</organization>
+      <organizationUrl>http://loci.wisc.edu/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-6</timezone>
     </developer>
   </developers>
 
