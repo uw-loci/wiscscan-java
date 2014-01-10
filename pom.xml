@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>loci</groupId>
 		<artifactId>pom-loci</artifactId>
-		<version>1.4</version>
+		<version>1.13</version>
 	</parent>
 
 	<artifactId>wiscscan-java</artifactId>
@@ -28,19 +28,14 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>${scifio.groupId}</groupId>
-			<artifactId>loci-legacy</artifactId>
-			<version>${scifio.version}</version>
+			<groupId>${bio-formats.groupId}</groupId>
+			<artifactId>loci-common</artifactId>
+			<version>${bio-formats.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${scifio.groupId}</groupId>
+			<groupId>${bio-formats.groupId}</groupId>
 			<artifactId>scifio</artifactId>
-			<version>${scifio.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${scifio.groupId}</groupId>
-			<artifactId>scifio-devel</artifactId>
-			<version>${scifio.version}</version>
+			<version>${bio-formats.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -49,9 +44,9 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>${scifio.groupId}</groupId>
+			<groupId>${bio-formats.groupId}</groupId>
 			<artifactId>ome-xml</artifactId>
-			<version>${scifio.version}</version>
+			<version>${bio-formats.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
@@ -74,10 +69,9 @@
 				<version>1.1.1</version>
 				<configuration>
 					<libraries>
-						<library>${scifio.groupId}:loci-legacy:jar:${scifio.version}</library>
-						<library>${scifio.groupId}:ome-xml:jar:${scifio.version}</library>
-						<library>${scifio.groupId}:scifio:jar:${scifio.version}</library>
-						<library>${scifio.groupId}:scifio-devel:jar:${scifio.version}</library>
+						<library>${bio-formats.groupId}:loci-common:jar:${bio-formats.version}</library>
+						<library>${bio-formats.groupId}:ome-xml:jar:${bio-formats.version}</library>
+						<library>${bio-formats.groupId}:scifio:jar:${bio-formats.version}</library>
 						<library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
 					</libraries>
 				</configuration>
