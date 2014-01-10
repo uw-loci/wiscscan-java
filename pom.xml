@@ -87,7 +87,7 @@
 
 	<developers>
 		<developer>
-			<id>ajeet</id>
+			<id>avivekan</id>
 			<name>Ajeet Vivekanandan</name>
 			<url>http://loci.wisc.edu/people/ajeet-vivekanandan</url>
 			<organization>UW-Madison LOCI</organization>
@@ -98,7 +98,7 @@
 			<timezone>-6</timezone>
 		</developer>
 		<developer>
-			<id>curtis</id>
+			<id>ctrueden</id>
 			<name>Curtis Rueden</name>
 			<email>ctrueden@wisc.edu</email>
 			<url>http://loci.wisc.edu/people/curtis-rueden</url>
@@ -114,7 +114,7 @@
 			</properties>
 		</developer>
 		<developer>
-			<id>david</id>
+			<id>djmayer101</id>
 			<name>David Mayer</name>
 			<url>http://loci.wisc.edu/people/david-mayer</url>
 			<organization>UW-Madison LOCI</organization>
