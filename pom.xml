@@ -126,6 +126,13 @@
 		</developer>
 	</developers>
 
+	<scm>
+		<connection>scm:git:git://github.com/uw-loci/wiscscan-java</connection>
+		<developerConnection>scm:git:git@github.com:uw-loci/wiscscan-java</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/uw-loci/wiscscan-java</url>
+	</scm>
+
 	<repositories>
 		<!-- NB: for project parent -->
 		<repository>
