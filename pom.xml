@@ -21,7 +21,6 @@
 	<licenses>
 		<license>
 			<name>BSD</name>
-			<url>https://raw.github.com/uw-loci/wiscscan-java/master/LICENSE.txt</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
