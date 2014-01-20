@@ -19,14 +19,6 @@
 	<description>Java code for use with WiscScan.</description>
 	<inceptionYear>2008</inceptionYear>
 
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
 	<dependencies>
 		<dependency>
 			<groupId>${bio-formats.groupId}</groupId>
