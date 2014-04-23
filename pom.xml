@@ -20,30 +20,27 @@
 	<inceptionYear>2008</inceptionYear>
 
 	<properties>
-		<bio-formats.version>5.0.1</bio-formats.version>
+		<flow-cytometry.version>1.0.0-SNAPSHOT</flow-cytometry.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>${bio-formats.groupId}</groupId>
+			<groupId>ome</groupId>
 			<artifactId>formats-api</artifactId>
-			<version>${bio-formats.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${bio-formats.groupId}</groupId>
+			<groupId>ome</groupId>
 			<artifactId>formats-common</artifactId>
-			<version>${bio-formats.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${bio-formats.groupId}</groupId>
+			<groupId>ome</groupId>
 			<artifactId>ome-xml</artifactId>
-			<version>${bio-formats.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>loci</groupId>
 			<artifactId>flow-cytometry</artifactId>
-			<version>${project.version}</version>
+			<version>${flow-cytometry.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
@@ -66,10 +63,10 @@
 				<version>1.1.1</version>
 				<configuration>
 					<libraries>
-						<library>${bio-formats.groupId}:formats-api:jar:${bio-formats.version}</library>
-						<library>${bio-formats.groupId}:formats-common:jar:${bio-formats.version}</library>
-						<library>${bio-formats.groupId}:ome-xml:jar:${bio-formats.version}</library>
-						<library>${project.groupId}:flow-cytometry:jar:${project.version}</library>
+						<library>ome:formats-api:jar:${bio-formats.version}</library>
+						<library>ome:formats-common:jar:${bio-formats.version}</library>
+						<library>ome:ome-xml:jar:${bio-formats.version}</library>
+						<library>loci:flow-cytometry:jar:${flow-cytometry.version}</library>
 					</libraries>
 				</configuration>
 			</plugin>
