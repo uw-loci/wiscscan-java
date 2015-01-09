@@ -21,6 +21,7 @@
 
 	<properties>
 		<flow-cytometry.version>1.0.0-SNAPSHOT</flow-cytometry.version>
+		<enforcer.skip>true</enforcer.skip>
 	</properties>
 
 	<dependencies>
