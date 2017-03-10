@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -19,10 +16,72 @@
 	<description>Java code for use with WiscScan.</description>
 	<inceptionYear>2008</inceptionYear>
 
+	<developers>
+		<developer>
+			<id>avivekan</id>
+			<name>Ajeet Vivekanandan</name>
+			<url>http://loci.wisc.edu/people/ajeet-vivekanandan</url>
+			<organization>UW-Madison LOCI</organization>
+			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-6</timezone>
+		</developer>
+		<developer>
+			<id>ctrueden</id>
+			<name>Curtis Rueden</name>
+			<email>ctrueden@wisc.edu</email>
+			<url>http://loci.wisc.edu/people/curtis-rueden</url>
+			<organization>UW-Madison LOCI</organization>
+			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>-6</timezone>
+		</developer>
+		<developer>
+			<id>djmayer101</id>
+			<name>David Mayer</name>
+			<url>http://loci.wisc.edu/people/david-mayer</url>
+			<organization>UW-Madison LOCI</organization>
+			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-6</timezone>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/uw-loci/wiscscan-java</connection>
+		<developerConnection>scm:git:git@github.com:uw-loci/wiscscan-java</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/uw-loci/wiscscan-java</url>
+	</scm>
+
 	<properties>
 		<flow-cytometry.version>1.0.0-SNAPSHOT</flow-cytometry.version>
 		<enforcer.skip>true</enforcer.skip>
 	</properties>
+
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<!-- NB: for cppwrap-maven-plugin -->
+		<pluginRepository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
 		<dependency>
@@ -73,68 +132,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<developers>
-		<developer>
-			<id>avivekan</id>
-			<name>Ajeet Vivekanandan</name>
-			<url>http://loci.wisc.edu/people/ajeet-vivekanandan</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-		<developer>
-			<id>ctrueden</id>
-			<name>Curtis Rueden</name>
-			<email>ctrueden@wisc.edu</email>
-			<url>http://loci.wisc.edu/people/curtis-rueden</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-		<developer>
-			<id>djmayer101</id>
-			<name>David Mayer</name>
-			<url>http://loci.wisc.edu/people/david-mayer</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-	</developers>
-
-	<scm>
-		<connection>scm:git:git://github.com/uw-loci/wiscscan-java</connection>
-		<developerConnection>scm:git:git@github.com:uw-loci/wiscscan-java</developerConnection>
-		<tag>HEAD</tag>
-		<url>https://github.com/uw-loci/wiscscan-java</url>
-	</scm>
-
-	<repositories>
-		<repository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<!-- NB: for cppwrap-maven-plugin -->
-		<pluginRepository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-
 </project>
