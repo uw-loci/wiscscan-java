@@ -18,41 +18,33 @@
 
 	<developers>
 		<developer>
-			<id>avivekan</id>
-			<name>Ajeet Vivekanandan</name>
-			<url>http://loci.wisc.edu/people/ajeet-vivekanandan</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-		<developer>
 			<id>ctrueden</id>
 			<name>Curtis Rueden</name>
-			<email>ctrueden@wisc.edu</email>
-			<url>http://loci.wisc.edu/people/curtis-rueden</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<url>https://imagej.net/User:Rueden</url>
 			<roles>
-				<role>architect</role>
-				<role>developer</role>
+				<role>founder</role>
+				<role>lead</role>
+				<role>maintainer</role>
 			</roles>
-			<timezone>-6</timezone>
-		</developer>
-		<developer>
-			<id>djmayer101</id>
-			<name>David Mayer</name>
-			<url>http://loci.wisc.edu/people/david-mayer</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
 		</developer>
 	</developers>
+	<contributors>
+		<contributor>
+			<name>Hanly De Los Santos</name>
+			<properties><id>hdelossantos</id></properties>
+		</contributor>
+		<contributor>
+			<name>Abhinav Tallavajhula</name>
+		</contributor>
+		<contributor>
+			<name>Ajeet Vivekanandan</name>
+			<properties><id>avivekan</id></properties>
+		</contributor>
+		<contributor>
+			<name>David Mayer</name>
+			<properties><id>djmayer101</id></properties>
+		</contributor>
+	</contributors>
 
 	<scm>
 		<connection>scm:git:git://github.com/uw-loci/wiscscan-java</connection>
