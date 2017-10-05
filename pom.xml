@@ -91,6 +91,9 @@
 Wisconsin-Madison.</license.copyrightOwners>
 		<flow-cytometry.version>1.0.0-SNAPSHOT</flow-cytometry.version>
 		<enforcer.skip>true</enforcer.skip>
+
+		<!-- NB: Deploy releases to the ImageJ Maven repository. -->
+		<releaseProfiles>deploy-to-imagej</releaseProfiles>
 	</properties>
 
 	<repositories>
